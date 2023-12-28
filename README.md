@@ -8,79 +8,79 @@
 ![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-<p>Food delivery application based on the concept of uber, rappi, etc... In which you can register as a customer, owner or delivery person and depending on your profile you can register your restaurant for the sale of food, help deliver orders and order what you like the most.</p>
+<p>Aplicación de comida a domicilio basada en el concepto de uber, rappi, etc... En el que podrás registrarte como cliente, propietario o repartidor y dependiendo de tu perfil podrás dar de alta tu restaurante para la venta de comida, ayudar a entregar pedidos y pedir lo que más te guste.</p>
 
 </div>
 
-### Preview
+### Vista previa
 
 ![](./.readme-static/app.jpeg)
 
-## The project
+## El proyecto
 
-Backend built mainly to be consumed by the frontend application made with react that you can find in
-the following link: [react-food-delivery](https://github.com/DavidBarcenas/react-food-delivery).
+Backend construido principalmente para ser consumido por la aplicación frontend hecha con react que puedes encontrar en
+en el siguiente enlace: [react-food-delivery](https://github.com/holiweed/react-food-delivery).
 
-## Features
+## Características
 
-- Personalized mailing
-- Account confirmation
-- Use of graphql and apollo server
-- Web sockets with Graphql
-- Handlebears for mail templates
-- Postgress with TypeORM
-- Tasks schedules
-- Linters and prettier config
-- Email confirmation
-- Docker to create the database
+- Mailing personalizado
+- Confirmación de la cuenta
+- Uso de graphql y servidor apollo
+- Sockets web con Graphql
+- Handlebears para plantillas de correo
+- Postgress con TypeORM
+- Cronogramas de tareas
+- Linters y configuración más bonita
+- Confirmación por correo electrónico
+- Docker para crear la base de datos
 
-## Installation
+## Instalación
 
-To clone and run this application, you'll need Git and Node.js installed on your computer. Optional
-you can install Yarn.
+Para clonar y ejecutar esta aplicación, necesitará Git y Node.js instalados en su computadora. Opcional
+puedes instalar Yarn.
 
-From your command line:
+Desde la línea de comandos:
 
 ```bash
-# Clone this repository
+# Clona este repositorio
 $ git clone https://github.com/DavidBarcenas/food-delivery-backend.git
 
-# Go into the repository
+# Abrir repositorio
 $ cd food-delivery-backend
 
-# Install dependencies
+# Instalar dependencias
 $ npm install
 ```
 
-You must have [docker](https://www.docker.com/get-started/) installed to create and run the
-database.
+Debe tener [docker](https://www.docker.com/get-started/) instalado para crear y ejecutar el archivo
+base de datos.
 
 ```bash
-# It will create the database container
+# Crear el la base de datos del contenedor con docker
 $ docker-compose up
 
-# If you see the message below in your terminal, the container was created successfully.
-database system is ready to accept connections
+# Si ve el siguiente mensaje en su terminal, el contenedor se creó correctamente.
+El sistema de base de datos está listo para aceptar conexiones
 ```
 
-To connect to the database you can use a tool like [DBeaver](https://dbeaver.io/) or the one you
-prefer. The data you need for the connection can be found and configured in the
-**docker-compose.yml** file.
+Para conectarte a la base de datos puedes usar una herramienta como [DBeaver](https://dbeaver.io/) o la que
+preferir. Los datos que necesita para la conexión se pueden encontrar y configurar en el
+**docker-compose.yml**.
 
-In any case, I leave you the commands in case you want to see the tables from your terminal.
+En cualquier caso, te dejo los comandos por si quieres ver las tablas desde tu terminal.
 
 ```bash
-# First you have to access the container
+# Primero tienes que acceder al contenedor
 docker exec -it <container-name> psql -U <username> <database>
 
-# If you accessed correctly you will see this change in your terminal
+# Si accediste correctamente verás este cambio en tu terminal
 food_delivery=#
 
-# Then run the following command to list the tables (you can run any PSQL-Query you like)
+# A continuación, ejecute el siguiente comando para enumerar las tablas (puede ejecutar cualquier consulta PSQL que desee)
 \dt
 
-# e.g. food_delivery=# \dt
-# The output of the above command
+# por ejemplo, food_delivery=# dt
+# La salida del comando anterior
                  List of relations
  Schema |          Name          | Type  |
 --------+------------------------+-------+
@@ -95,12 +95,12 @@ food_delivery=#
  public | u
 ```
 
-## Development
+## Desarrollo
 
-Starts the application in development mode with active code reloading, bug reports, and more.
+Inicia la aplicación en modo de desarrollo con recarga activa de código, informes de errores y mucho más.
 
-For the application to run properly don't forget to add your **.env.dev, .env.prod and .env.test
-files** in the root of the project (at the same level as the src folder).
+Para que la aplicación funcione correctamente, no olvide agregar sus archivos **.env.dev, .env.prod y .env.test
+files** en la raíz del proyecto (en el mismo nivel que la carpeta src).
 
 ```bash
 # development
@@ -113,13 +113,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-_Sometimes when you get an error in terminal like file not found, it can be fixed by removing the
-**dist** folder from the root. Or, you can also run the command `npm run prebuild`_
+A veces, cuando obtiene un error en la terminal, como un archivo no encontrado, se puede solucionar eliminando el archivo
+**dist** desde la raíz. O bien, también puede ejecutar el comando 'npm run prebuild'_
 
-After successfully running the application, you can go to
-[http://localhost:4000/graphql](http://localhost:4000/graphql) to interact with the graphql
-playground.
-
+Después de ejecutar correctamente la aplicación, puede ir a
+[http://localhost:4000/graphql] (http://localhost:4000/graphql) para interactuar con el GraphQL_PlayGround
 ![](./.readme-static/localhost_4000_graphql.png)
 
 ## Test
@@ -135,12 +133,11 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Notes
+## Notas
 
-Don't forget to set your environment variables. In the project there is a file called
-**.env.dev.example** there it has all the variables you will need.
+No olvide establecer las variables de entorno. En el proyecto hay un archivo llamado
+**.env.dev.example** allí tiene todas las variables que necesitarás.
 
-# License
+# Licencia
 
-Released under the [MIT licensed](LICENSE).\
-Feel free to fork this project and improve it. Give a ⭐️ if you like this project!
+Siéntase libre de bifurcar este proyecto y mejorarlo. ¡Regala un ⭐️ si te gusta este proyecto!
