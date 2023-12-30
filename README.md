@@ -43,7 +43,7 @@ Desde la línea de comandos:
 
 ```bash
 # Clona este repositorio
-$ git clone https://github.com/DavidBarcenas/food-delivery-backend.git
+$ git clone https://github.com/holiweed/food-delivery-backend.git
 
 # Abrir repositorio
 $ cd food-delivery-backend
