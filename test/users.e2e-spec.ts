@@ -12,7 +12,7 @@ import {EmailVerification} from 'src/users/entities/email-verification.entity';
 const GRAPHQL_ENDPOINT = '/graphql';
 
 const testUser = {
-  email: 'davee@mail.com',
+  email: 'holiweed@holiweed94.online',
   password: '12345',
 };
 
